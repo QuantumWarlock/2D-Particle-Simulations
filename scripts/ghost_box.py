@@ -234,6 +234,6 @@ if __name__ == '__main__':
     ax.set_ylim([GC.boxD,GC.boxU])
     tText = ax.text(4, 9.5, 'Time = ')
     ani = animation.FuncAnimation(fig, animate, frames=101,
-                                  interval=200, blit=True,
+                                  interval=100, blit=True,
                                   init_func=init, repeat=False)
     plt.show()
