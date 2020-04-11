@@ -4,9 +4,6 @@
 
 This repository features several scripts for simulating non-relativistic elastic 2D collisions. In all cases, the particles are modeled as circles. 
 
-## REQUIREMENTS
-**ANACONDA PYTHON** recommended (need version information). While recommended, *Anaconda* is not required. A *Python3* distribution with the following modules are required: *numpy*, *random*, *matplotlib*, (finish list). 
-
 The two simulations in the following table feature various collision scenarious with equal mass and radius particles represented by circles.
 Ghost Box         | Hard Circle Box       
 ---------         | ---------------
@@ -31,6 +28,9 @@ The last simulation features hard-sphere elatic collions in a pentagon. While th
 Pentagon Zombie Apocalypse          |
 --------------------------          |
 Pentagon Zombie Apocalypse info ... |
+
+## REQUIREMENTS
+**ANACONDA PYTHON** is recommended (need version information) but not required. A *Python3* distribution with the following modules are required: **numpy**, **random**, **matplotlib**, **math**. 
 
 ## Details
 ### ghost_box.py
