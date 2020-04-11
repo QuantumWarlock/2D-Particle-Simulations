@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
+Program: ghost_box
 Created: Apr 2020
-
 @author: Ryan Clement (RRCC)
          scisoft@outlook.com
 """
@@ -17,7 +17,8 @@ from matplotlib import cm
 
 
 ### SET COLOR MAP
-rainbow = cm.get_cmap('gist_rainbow')
+# colors = cm.get_cmap('gist_rainbow')
+colors = cm.get_cmap('seismic')
 
 
 ### CLASSES
@@ -30,7 +31,6 @@ class GC:
               by magic and stuff. They bounce of walls like Sir Isaac Newton
               told us they should).
     """
-
     # Class Variables
     numInstances = 0         # #         Number of instanciations of this class.
     dt     = 0.01            # seconds   Time-Step
@@ -66,6 +66,7 @@ class GC:
         """
         GC.numInstances += 1
         self.x  = x
+        self.xC = x/GC.boxR
         self.y  = y
         self.vx = vx
         self.vy = vy
@@ -75,9 +76,8 @@ class GC:
         dt = r/(2.0*v)          # Time step control. Prevent circle centers
                                 # from crossing in a single time-step.
         GC.dt = min(GC.dt,dt)
-        self.graphic = plt.Circle((x,y), radius=r,
-                                  fill=False, color=rainbow(x/GC.boxR),
-                                  linewidth=3)
+        self.graphic = plt.Circle((x,y), radius=r, fill=False,
+                                  color=colors(self.xC), linewidth=3)
     def __del__(self):
         """
         Ghost Circle Destructor
@@ -106,36 +106,37 @@ class GC:
         y  = self.y
         vx = self.vx
         vy = self.vy
+        r  = self.r
         bD = GC.boxD
         bU = GC.boxU
         bL = GC.boxL
         bR = GC.boxR
         # Y
-        if( y < bD ):
-            tD = dt - (bD - y)/vy
+        if( y < bD+r ):
+            tD = dt - abs( (bD - y)/vy )
             self.vy *= -1.0
-            self.y = bD + vy*tD
-        elif( y > bU ):
-            tU = dt - (bU - y)/vy
+            self.y = bD + vy*tD + r
+        elif( y > bU-r ):
+            tU = dt - abs( (bU - y)/vy )
             self.vy *= -1.0
-            self.y = bU + vy*tU
+            self.y = bU + vy*tU - r
         # X
-        if( x < bL ):
-            tL = dt - (bL - x)/vx
+        if( x < bL+r ):
+            tL = dt - abs( (bL - x)/vx )
             self.vx *= -1.0
-            self.x = bL + vx*tL
-        elif( x > bR ):
-            tR = dt - (bR - x)/vx
+            self.x = bL + vx*tL + r
+        elif( x > bR-r ):
+            tR = dt - abs( (bR - x)/vx )
             self.vx *= -1.0
-            self.x = bR + vx*tR
+            self.x = bR + vx*tR - r
 
     def __updateGraphic(self):
         """
         Update graphic after a move.
         """
         self.graphic = plt.Circle((self.x,self.y), radius=self.r,
-                                  fill=False, color=rainbow(self.x/GC.boxR),
-                                  linewidth=3)
+                                  color=colors(self.xC),
+                                  fill=False, linewidth=3)
 # END: GC
 ### END: CLASSES
 
@@ -178,11 +179,32 @@ def correctIC(gcList):
                 gcList[j].x -= dx
                 gcList[j].y -= dy
 # END: correctIC
+
+## Animation Functions:
+def init():
+    patches = []
+    return patches
+
+def animate(i):
+    patches = []
+    if( i > 0 ):
+        # 10 time-steps per graphics update
+        for j in np.arange(10):
+            for gc in gcList:
+                gc.move()
+    # Graphics update
+    s = 'Time = %.2f s' % gcList[0].t
+    tText.set_text(s)
+    for gc in gcList:
+        patches.append(ax.add_patch(gc.graphic))
+    patches.append(tText)
+    return patches
+## END: Animation Functions
 ### END: FUNCTIONS
 
 
 if __name__ == '__main__':
-    numCircles = 10                    # Number of circles along an axis. Total number of
+    numCircles = 3                     # Number of circles along an axis. Total number of
                                        # circles is numCircles**2
     dW = GC.boxR/(numCircles+1)
     dH = GC.boxU/(numCircles+1)
@@ -197,19 +219,21 @@ if __name__ == '__main__':
             # NOTE: This simulation assumes non-relativistic velocities. If you want
             #       to REALLY crank-up the velocities please consider appropriate
             #       adjustments to the physics.
-            vxR = random.uniform(-1,1)   # Want ghosts to move faster? Crank this up!
-            vyR = random.uniform(-1,1)   # Want ghosts to move faster? Crank this up!
+            vxR = random.uniform(-10,10)   # Want ghosts to move faster? Crank this up!
+            vyR = random.uniform(-10,10)   # Want ghosts to move faster? Crank this up!
             gcList.append( GC(x,y,vxR,vyR,rC) )
     fig, ax = plt.subplots()
     fig.set_size_inches(GC.figW,GC.figH)
     ax.grid(b=True, which='major', color='lightgrey')
-    #ax.grid(b=True, which='minor', color='lightgrey')
+    # ax.grid(b=True, which='minor', color='lightgrey')
     ax.xaxis.set_minor_locator(AutoMinorLocator(10))
     ax.yaxis.set_minor_locator(AutoMinorLocator(10))
     ax.set_title('Ghost Circles')
     ax.axis('scaled')
     ax.set_xlim([GC.boxL,GC.boxR])
     ax.set_ylim([GC.boxD,GC.boxU])
-    for gc in gcList:
-        ax.add_patch(gc.graphic)
+    tText = ax.text(4, 9.5, 'Time = ')
+    ani = animation.FuncAnimation(fig, animate, frames=101,
+                                  interval=200, blit=True,
+                                  init_func=init, repeat=False)
     plt.show()
