@@ -19,7 +19,7 @@ The following files are located in the *scripts* directory:
 
 * **hard_box.py**
 
-  This simulation is a bit *billiard ball* like. The circular particles are now infinitely hard and can't be penetrated. That is, all collisions are elastic.
+  This simulation is a bit *billiard ball* like. The circular particles are now theoretically impenetrable. One may even conclude the collisions are elastic. Of course, my computer represents numbers by a finite collection of binary "bits" and the time-steps are kinda large by calculus standards. I'm just saying interesting (non-physical) things can happen. There is also the infinite potential at the surface of the circle assumption thing...
 
 * **hard_circle.py**
 
