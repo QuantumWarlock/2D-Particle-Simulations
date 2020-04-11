@@ -35,14 +35,16 @@ Pentagon Zombie Apocalypse info ... |
 ## Details
 ### ghost_box.py
 
+### ghost_circle.py
+
 ### hard_circle_box.py
 
 ### hard_circle_circle.py
 
 ### hard_circle_gravity_box.py
 
-### TBD.py
+### TBD_box.py
 
-### TBD.py
+### TBD_circle.py
 
 ### pentagon_zombie_apocalypse.py
