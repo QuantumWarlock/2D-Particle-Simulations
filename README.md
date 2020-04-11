@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
+# 2D-Particle-Simulations
 
-You can use the [editor on GitHub](https://github.com/QuantumWarlock/2D-Particle-Simulations/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+This repository features several scripts for simulating non-relativistic elastic 2D collisions. In all cases, the particles are modeled as circles. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## REQUIREMENTS
+**ANACONDA PYTHON** recommended (need version information). While recommended, *Anaconda* is not required. A *Python3* distribution with the following modules are required: *numpy*, *random*, *matplotlib*, (finish list). 
 
-```markdown
-Syntax highlighted code block
+The two simulations in the following table feature various collision scenarious with equal mass and radius particles represented by circles.
+Ghost Box         | Hard Circle Box       
+---------         | ---------------
+Ghost Box info... | Ghost Circle info ...
 
-# Header 1
-## Header 2
-### Header 3
+This simulation adds a uniform gravity field to the *Hard Circle Box* above.
+Hard Circle Gravity Box          |
+-----------------------          |
+Hard Circle Gravity Box info ... |
 
-- Bulleted
-- List
+These two simulations uses a circle as the enclosing boundary. The intention is to demonstrate the changes required to handle different boundary conditions.
+Ghost Circle         | Hard Circle Circle
+------------         | ------------------
+Ghost Circle info... | Ghost Circle Circle info...
 
-1. Numbered
-2. List
+The following table shows the TBD simulations that feature collisions with particles represented by circles with different radii and masses.
+TBD Box         | TBD Circle
+-------         | ----------
+TBD Box info... | TBD Circle Info...
 
-**Bold** and _Italic_ and `Code` text
+The last simulation features hard-sphere elatic collions in a pentagon. While this simulation is a bit "...and now for something completely different" its purpose is to create something like an application for the type of physics represented in this repository.
+Pentagon Zombie Apocalypse          |
+--------------------------          |
+Pentagon Zombie Apocalypse info ... |
 
-[Link](url) and ![Image](src)
-```
+## Details
+### ghost_box.py
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### hard_circle_box.py
 
-### Jekyll Themes
+### hard_circle_circle.py
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/QuantumWarlock/2D-Particle-Simulations/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### hard_circle_gravity_box.py
 
-### Support or Contact
+### TBD.py
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### TBD.py
+
+### pentagon_zombie_apocalypse.py
