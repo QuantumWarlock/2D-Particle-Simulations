@@ -30,7 +30,7 @@ Pentagon Zombie Apocalypse          |
 Pentagon Zombie Apocalypse info ... |
 
 ## REQUIREMENTS
-**ANACONDA PYTHON** is recommended (need version information) but not required. A *Python3* distribution with the following modules are required: **numpy**, **random**, **matplotlib**, **math**. 
+**ANACONDA PYTHON** is recommended (need version information) but not required. A **Python3** distribution with the following modules are required: **numpy**, **random**, **matplotlib**, **math**. 
 
 ## Details
 ### ghost_box.py
