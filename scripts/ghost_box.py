@@ -251,4 +251,4 @@ if __name__ == '__main__':
     # Uncomment next two lines to write file to disk.
     # pwriter = animation.PillowWriter(fps=10, metadata=dict(artist='Dr. Ryan Clement'))
     # ani.save('../movies/ghost_box.gif',writer=pwriter)
-    # plt.show()
+    plt.show()
