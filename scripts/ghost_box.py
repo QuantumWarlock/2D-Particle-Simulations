@@ -186,6 +186,17 @@ def init():
     return patches
 
 def animate(i):
+    ax.clear()
+    ax.grid(b=True, which='major', color='lightgrey')
+    # ax.grid(b=True, which='minor', color='lightgrey')
+    ax.xaxis.set_minor_locator(AutoMinorLocator(10))
+    ax.yaxis.set_minor_locator(AutoMinorLocator(10))
+    ax.set_title('Ghost Circles')
+    ax.axis('scaled')
+    ax.set_xlim([GC.boxL,GC.boxR])
+    ax.set_ylim([GC.boxD,GC.boxU])
+    tText = ax.text(4, 9.5, '')
+
     patches = []
     if( i > 0 ):
         # 10 time-steps per graphics update
@@ -236,4 +247,8 @@ if __name__ == '__main__':
     ani = animation.FuncAnimation(fig, animate, frames=101,
                                   interval=100, blit=True,
                                   init_func=init, repeat=False)
-    plt.show()
+
+    # Uncomment next two lines to write file to disk.
+    # pwriter = animation.PillowWriter(fps=10, metadata=dict(artist='Dr. Ryan Clement'))
+    # ani.save('../movies/ghost_box.gif',writer=pwriter)
+    # plt.show()
