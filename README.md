@@ -53,6 +53,7 @@ The following files are in the *movies* directory. The animated gifs are meant t
 * **hard_circle.gif**
 
 * **hard_gravity_box.gif**
+
   Balls are released with zero initial velocity. They fall in vertical columns under the influence of gravity and then do only what a simulation can.
 
 * **hard_diffmass_box.gif**
