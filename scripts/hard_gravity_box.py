@@ -253,7 +253,7 @@ def animate(i):
 
 
 if __name__ == '__main__':
-    numCircles = 3                     # Number of circles along an axis. Total number of
+    numCircles = 10                     # Number of circles along an axis. Total number of
                                        # circles is numCircles**2
     dW = HB.boxR/(numCircles+1)
     dH = HB.boxU/(numCircles+1)
@@ -268,10 +268,10 @@ if __name__ == '__main__':
             # NOTE: This simulation assumes non-relativistic velocities. If you want
             #       to REALLY crank-up the velocities please consider appropriate
             #       adjustments to the physics.
-            vxR = random.uniform(-10,10)   # Want ghosts to move faster? Crank this up!
-            vyR = random.uniform(-10,10)   # Want ghosts to move faster? Crank this up!
-            # vxR = 0.0
-            # vyR = -10.0
+            # vxR = random.uniform(-10,10)   # Want ghosts to move faster? Crank this up!
+            # vyR = random.uniform(-10,10)   # Want ghosts to move faster? Crank this up!
+            vxR = 0.0
+            vyR = 0.0
             hbList.append( HB(x,y,vxR,vyR,rC) )
     fig, ax = plt.subplots()
     fig.set_size_inches(HB.figW,HB.figH)
@@ -284,11 +284,11 @@ if __name__ == '__main__':
     ax.set_xlim([HB.boxL,HB.boxR])
     ax.set_ylim([HB.boxD,HB.boxU])
     tText = ax.text(4, 9.5, 'Time = ')
-    ani = animation.FuncAnimation(fig, animate, frames=901,
+    ani = animation.FuncAnimation(fig, animate, frames=201,
                                   interval=100, blit=True,
                                   init_func=init, repeat=False)
 
     # Uncomment next two lines to write file to disk.
     # pwriter = animation.PillowWriter(fps=10, metadata=dict(artist='Dr. Ryan Clement'))
-    # ani.save('../movies/hard_box.gif',writer=pwriter)
+    # ani.save('../movies/hard_gravity_box.gif',writer=pwriter)
     plt.show()
