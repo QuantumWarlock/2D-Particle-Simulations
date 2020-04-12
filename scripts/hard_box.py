@@ -88,10 +88,12 @@ class HB:
         Move circle according to its velocity.
         """
         dt = HB.dt
+        vx = self.vx
+        vy = self.vy
         # X
-        self.x += self.vx*dt
+        self.x += vx*dt
         # Y
-        self.y += self.vy*dt
+        self.y += vy*dt
         # Collision with wall?
         self.__boundaries()
         # Time
@@ -100,11 +102,11 @@ class HB:
         # self.updateGraphic()
 
     def __boundaries(self):
-        dt = HB.dt
+        # dt = HB.dt
         x  = self.x
         y  = self.y
-        vx = self.vx
-        vy = self.vy
+        # vx = self.vx
+        # vy = self.vy
         r  = self.r
         bD = HB.boxD
         bU = HB.boxU
@@ -278,8 +280,8 @@ if __name__ == '__main__':
                                   init_func=init, repeat=False)
 
     # Uncomment next two lines to write file to disk.
-    pwriter = animation.PillowWriter(fps=10, metadata=dict(artist='Dr. Ryan Clement'))
-    ani.save('../movies/hard_box.gif',writer=pwriter)
+    # pwriter = animation.PillowWriter(fps=10, metadata=dict(artist='Dr. Ryan Clement'))
+    # ani.save('../movies/hard_box.gif',writer=pwriter)
     plt.show()
 
 
