@@ -4,8 +4,8 @@ https://quantumwarlock.github.io/2D-Particle-Simulations/
 
 This repository features several scripts for simulating non-relativistic elastic 2D collisions. In all cases, the particles are modeled as circles. 
 
-## REQUIREMENTS
-**ANACONDA PYTHON** is recommended (need version information) but not required. A **Python3** distribution with the following modules are required: **numpy**, **random**, **matplotlib**, **math**. 
+## Requirements
+**Anaconda Python** is recommended (need version information) but not required. A **Python3** distribution with the following modules are required: **numpy**, **random**, **matplotlib**, **math**. 
 
 ## Python Scripts
 The following files are located in the *scripts* directory:
@@ -41,9 +41,24 @@ The following files are located in the *scripts* directory:
 
   This simulation features hard-sphere elatic collions in a pentagon. While this simulation is a bit *"...and now for something completely different"* its purpose is to create an application for the type of physics represented in this repository.
 
+## Movies
+The following files are in the *movies* directory. The animated gifs are meant to demonstrate a capability for each simulation of the same name.
 
+* **ghost_box.gif**
 
+* **ghost_circle.gif**
 
+* **hard_box.gif**
+
+* **hard_circle.gif**
+
+* **hard_gravity_box.gif**
+
+* **hard_diffmass_box.gif**
+
+* **hard_diffmass_circle.gif**
+
+* **pentagon_zombie_apocalypse.gif**
 
 
 
