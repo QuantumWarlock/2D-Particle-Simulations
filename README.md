@@ -54,7 +54,7 @@ The following files are in the *movies* directory. The animated gifs are meant t
 
 * **hard_circle.gif**
 
-  400 hard circles bouncing around in a circle. It's Petri dish like.
+  400 hard circles bouncing around in a circle. Graphic is updated every 10 time-steps. It's Petri dish like.
 
 * **hard_gravity_box.gif**
 
