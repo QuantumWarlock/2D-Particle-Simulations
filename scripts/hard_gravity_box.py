@@ -7,7 +7,7 @@ Created: Apr 2020
 """
 
 ### IMPORTS
-import random
+# import random
 import math as m
 import numpy as np
 import matplotlib.pyplot as plt
@@ -26,9 +26,9 @@ class HB:
     """
     HB: Hard Box Class
 
-        NOTE: Circles interact with each other via elastic collisions, i.e.
+        * Circles interact with each other via elastic collisions, i.e.
               2D version of hard sphere scattering.
-        NOTE: Circles interact with the walls of the box.
+        * Circles interact with the walls of the box.
     """
     # Class Variables
     numInstances = 0         # #         Number of instanciations of this class.
