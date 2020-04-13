@@ -38,7 +38,6 @@ class HB:
     boxD   = 0.0             # meters    Bottom of Box (Down)
     boxL   = 0.0             # meters    Left Side of Box (Left)
     boxR   = 10.0            # meters    Right Side of Box (Right)
-    # mass   = 1.0             # units    Future: Mass of Circle (Do ghosts have mass?)
     figW   = 8               # inches    Width of Figure (Plot)
     figH   = 8               # inches    Height of Figure (Plot)
 

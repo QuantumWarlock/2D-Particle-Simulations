@@ -29,7 +29,6 @@ class HC:
     numInstances = 0         # #         Number of instanciations of this class.
     dt           = 0.01      # seconds   Time-Step
     bcR          = 5.0       # meters    Radius of bounding circle.
-    # mass       = 1.0       # units    Future: Mass of Circle (Do ghosts have mass?)
     figW         = 8         # inches    Width of Figure (Plot)
     figH         = 8         # inches    Height of Figure (Plot)
 
