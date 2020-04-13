@@ -44,15 +44,25 @@ The following files are located in the *scripts* directory:
 * **pentagon_zombie_apocalypse.py**
 
   This simulation features hard-sphere elatic collions in a pentagon. While this simulation is a bit *"...and now for something completely different"* its purpose is to create an application for the type of physics represented in this repository.
+  
+* **nuclear_box.py**
+
+  TBD
 
 ## Movies
 The following files are in the *movies* directory. The animated gifs are meant to demonstrate a capability for each simulation of the same name.
 
 * **ghost_box.gif**
 
+  6 circles uniformly distributed in a 10m X 10m box stylishly colored red and blue on a white background. Initial velocities for each particle (circle) are chosen randomly (OK, pseudorandomly) from a uniform distribution between -10m/s and 10m/s. Graphic is updated once for every 10 time-steps. 
+
 * **ghost_circle.gif**
 
+  100 (what value!) circles on a uniform grid, based on the largest square that can be inscribed in a circle (sides chosen parallel to the enclosing box as there are an infinite number of such boxes if orientation is considered ... but, yes, they all have the same area). The circular circle (particle) boundary has a 10m diameter. The circles are colored based on thier abscissa (x-position)  via a wonderfully delightful rainbow scheme! Initial velocities are chosen from a uniform distribution between -3m/s and 3m/s. Graphic is updated every 10 time-steps. 
+
 * **hard_box.gif**
+
+  9 circles uniformly distributed in the enclosing box with initial velocities chosen randomly between -10m/s and 10m/s. The rainbow coloring map is used. If you are feeling stressed choose this simulation to watch ... kinda like a screen-saver.
 
 * **hard_circle.gif**
 
@@ -64,9 +74,19 @@ The following files are in the *movies* directory. The animated gifs are meant t
 
 * **hard_diffmass_box.gif**
 
+  TBD
+
 * **hard_diffmass_circle.gif**
 
+  TBD
+
 * **pentagon_zombie_apocalypse.gif**
+
+  TBD
+
+* **nuclear_box.gif**
+
+  TBD
 
 
 
