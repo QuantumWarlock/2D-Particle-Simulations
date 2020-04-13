@@ -35,7 +35,7 @@ The following files are located in the *scripts* directory:
 
 * **hard_diffmass_box.py**
 
-  Similar to *hard_box* but now the particles all have different masses which are represented by correspondingly larger or smaller radii. The radius scaling is based on constant density, *i.e.* all balls have the same density.
+  Similar to *hard_box* but now the particles all have different masses which are represented by correspondingly larger or smaller radii. The radius scaling is based on constant density, *i.e.* all balls have the same density. The relationship between the radius and the mass is given by: mass = radius**2 (density = 1/Pi).
 
 * **hard_diffmass_circle.py**
 
@@ -74,7 +74,7 @@ The following files are in the *movies* directory. The animated gifs are meant t
 
 * **hard_diffmass_box.gif**
 
-  TBD
+  100 particles are given random velocities between -10m/s and 10m/s. If the x-component of velocity is in the interval [-10,0] the radius is halved and, therefore, the mass reduced by a factor of 4. If you ever wondered what soap bubbles would do if they didn't stick or pop this is what you have been waiting to see!
 
 * **hard_diffmass_circle.gif**
 
