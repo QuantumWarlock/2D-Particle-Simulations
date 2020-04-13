@@ -2,7 +2,9 @@
 
 https://quantumwarlock.github.io/2D-Particle-Simulations/
 
-This repository features several scripts for simulating non-relativistic elastic 2D collisions. In all cases, the particles are modeled as circles. 
+This repository features several scripts for simulating non-relativistic elastic 2D collisions. In all cases, the particles are modeled as circles.
+
+I may include a relativistic, inelastic example from nuclear physics in the future. Please send me an e-mail, if there is enough interest I'll include it sooner than later.
 
 ## Requirements
 **Anaconda Python** is recommended (need version information) but not required. A **Python3** distribution with the following modules are required: **numpy**, **random**, **matplotlib**, **math**. 
