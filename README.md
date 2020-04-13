@@ -8,6 +8,8 @@ This repository features several scripts for simulating non-relativistic elastic
 **Anaconda Python** is recommended (need version information) but not required. A **Python3** distribution with the following modules are required: **numpy**, **random**, **matplotlib**, **math**. 
 
 ## Python Scripts
+All of the following simulations scale the radius of the particles based on the number of the particles chosen (so they fit nicely and don't overlap). The initial time-step is also scaled based on the radius and initial velocities. The radius and time-step algorithms are conservative and could both easily be increased. The scripts feature various random and initial condition correction code that can be uncommented and used to suite ones needs if useful.
+
 The following files are located in the *scripts* directory:
 * **ghost_box.py**
 
@@ -27,7 +29,7 @@ The following files are located in the *scripts* directory:
 
 * **hard_gravity_box.py**
 
-  Particles undergo elastic collisions between each other and the walls while in a uniform gravity field.
+  Particles undergo elastic collisions between each other and the walls while in a uniform gravity field.  
 
 * **hard_diffmass_box.py**
 
@@ -51,6 +53,8 @@ The following files are in the *movies* directory. The animated gifs are meant t
 * **hard_box.gif**
 
 * **hard_circle.gif**
+
+  400 hard circles bouncing around in a circle. It's Petri dish like.
 
 * **hard_gravity_box.gif**
 
