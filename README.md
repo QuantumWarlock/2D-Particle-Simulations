@@ -45,6 +45,10 @@ The following files are located in the *scripts* directory:
 
   This simulation features hard-sphere elatic collions in a pentagon. While this simulation is a bit *"...and now for something completely different"* its purpose is to create an application for the type of physics represented in this repository.
   
+  **Backstory** 
+  
+  Blah ...
+  
 * **nuclear_box.py**
 
   TBD
