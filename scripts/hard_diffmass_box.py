@@ -269,10 +269,10 @@ def animate(i):
 
 if __name__ == '__main__':
     numCircles = 10                     # Number of circles along an axis. Total number of
-                                       # circles is numCircles**2
+                                        # circles is numCircles**2
     dW = HB.boxR/(numCircles+1)
     dH = HB.boxU/(numCircles+1)
-    rC = m.hypot(dW, dH)/4.0          # Diameter of circle is 1/2 of initial circle spacing.
+    rC = m.hypot(dW, dH)/4.0            # Diameter of circle is 1/2 of initial circle spacing.
     hbList = []
     for i in np.arange(numCircles):
         for j in np.arange(numCircles):
