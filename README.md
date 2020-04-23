@@ -45,9 +45,9 @@ The following files are located in the *scripts* directory:
 
   This simulation features hard-sphere elatic collions in a pentagon. While this simulation is a bit *"...and now for something completely different"* its purpose is to create an application for the type of physics represented in this repository.
   
-  **Backstory** 
+  *Backstory* 
   
-  Blah ...
+  It is a busy day at the Pentagon. Many very important people are busily doing very important things. However, some things are more super secret than others. What only a select few people and two scientists know is that Dr. Maxbrain has been flown in from AREA51. Dr. Maxbrain is the scientist who was recruited as a 10 year old prodigy and educated at the best schools earning several PhDs and a MD before turning 18 and could finally get a GREENDAWN security clearance! Dr. Maxbrain's expertise has been requested at the highest level to help in the fight against the current pandemic. The years of being locked away underground working with aliens has taken its toll and the good doctors ethics have gotten a bit shaky. In an effort to impress the brass and spend time with humans a cross with experimental alien DNA is attempted. The result is a human-alien hybrid that infects everyone it comes in contact with ... but the "hybrids" don't look like or have any of the advanced capabilities of the aliens. Dr. Maxbrain has been tricked! It's a zombie apocalypse at the pentagon...  
   
 * **nuclear_box.py**
 
@@ -86,7 +86,7 @@ The following files are in the *movies* directory. The animated gifs are meant t
 
 * **pentagon_zombie_apocalypse.gif**
 
-  TBD
+  Two hundred fifty very unlucky people and one messed up zombie make for an interesting movie.
 
 * **nuclear_box.gif**
 
